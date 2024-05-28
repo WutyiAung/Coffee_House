@@ -78,7 +78,6 @@ class UI {
         // show the cart
             this.showCart();
         });
-
       })
     }
 
@@ -86,7 +85,7 @@ class UI {
         let tempTotal = 0;
         let itemTotal = 0;
         cart.map( item => {
-            tempTotal = item.price * item.amount;
+            tempTotal += item.price * item.amount;
             itemTotal +=  item.amount;
         });
         cartTotal.innerText = parseFloat(tempTotal.toFixed(2));
